@@ -4,7 +4,6 @@ import { Movie } from "./components/movie";
 import "./index.css";
 
 const apiKey = process.env.REACT_APP_apiKey;
-// const apiKey = "dc06406d55128fd687038c5f830ad5ed"
 
 const trendingUrl = `https://api.themoviedb.org/3/trending/all/day?api_key=${apiKey}`;
 
