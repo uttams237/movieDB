@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: rgb(24, 24, 24);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +8,176 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+
+.root{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.search{
+  background-color: rgb(176, 176, 176);
+  border: 2px solid rgb(123, 123, 123);
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  color:rgb(0, 0, 0); 
+  align-items: center;
+}
+
+
+
+.search:focus{
+  outline: 0;
+}
+
+form{
+  display: flex;
+}
+
+
+header{
+  background-color: rgb(46, 46, 46);
+  padding: 1rem;
+  display: flex;
+  /* position: fixed; */
+  justify-content:space-between;
+}
+
+
+
+
+header h1{
+  margin: 0%;
+  color: white;
+}
+
+
+
+.movie{
+  width: 230px;
+  margin: 1rem;
+  background-color: rgb(75, 75, 75);
+  border-radius: 4px;
+  position: relative;
+  overflow:hidden ;
+  box-shadow: 3px 3px 8px rgb(93, 93, 93) ;
+}
+
+
+.titlee{
+  display: flex;
+  font-weight: lighter;
+  color: white;
+  justify-content : center;
+  text-transform: uppercase;
+}
+
+
+
+@media screen and (max-width:440px){
+  .movie{
+    width: 43%;
+    /* width: 145px; */
+    margin: 0.6rem;
+    font-size: smaller;
+    background-color: rgb(75, 75, 75);
+    border-radius: 3px;
+    position: relative;
+    overflow:hidden ;
+    box-shadow: 3px 3px 8px rgb(93, 93, 93) ;
+  }
+  
+  header{
+    background-color: rgb(46, 46, 46);
+    padding: 0.7rem;
+    display: flex;
+    position: sticky;
+    justify-content:space-between;
+    align-items: center;
+  }
+  header h1{
+    margin: 0%;
+    color: white;
+    font-size: large;
+    align-items: center;
+  }
+  .search{
+    background-color: rgb(176, 176, 176);
+    border: 2px solid rgb(123, 123, 123);
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.5rem 1rem;
+    color:rgb(0, 0, 0); 
+  }
+}
+
+
+
+.movie img{
+  width: 100%;
+  border-top-left-radius : 4px;
+  border-top-right-radius : 4px;
+}
+
+
+
+
+.movie-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+
+.movie-info{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  color: white;
+}
+
+
+
+
+.movie-over{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color:black;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  /* margin: 1rem; */
+  padding: 1rem;
+  overflow: auto;
+  background-color: rgb(196, 196, 196);
+  max-height: 100%;
+  transform: translateY(110%);
+  transition: transform 0.3s ease-in-out
+}
+
+
+
+
+.movie:hover .movie-over{
+  transform: translateY(0%);
+
 }
